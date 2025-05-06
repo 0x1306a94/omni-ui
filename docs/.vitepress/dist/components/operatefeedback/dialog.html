@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>对话框Dialog | OmniUI</title>
+    <meta name="description" content="OmniUI，享受飞一样的开发速度">
+    <meta name="generator" content="VitePress v1.3.3">
+    <link rel="preload stylesheet" href="/omni-ui/assets/style.CrxecPU7.css" as="style">
+    
+    <script type="module" src="/omni-ui/assets/app.R0MCaAzq.js"></script>
+    <link rel="preload" href="/omni-ui/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/omni-ui/assets/chunks/theme.h_vN-nAb.js">
+    <link rel="modulepreload" href="/omni-ui/assets/chunks/framework.CexspsV9.js">
+    <link rel="modulepreload" href="/omni-ui/assets/components_operatefeedback_dialog.md.DyQt7D4X.lean.js">
+    <link rel="icon" href="https://pic1.58cdn.com.cn/nowater/frs/n_v3be298af75a694c31a4fef8b1f33a3eaa.png">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-5d98c3a5><!--[--><!--]--><!--[--><span tabindex="-1" data-v-0f60ec36></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-0f60ec36> Skip to content </a><!--]--><!----><header class="VPNav" data-v-5d98c3a5 data-v-ae24b3ad><div class="VPNavBar has-sidebar top" data-v-ae24b3ad data-v-6aa21345><div class="wrapper" data-v-6aa21345><div class="container" data-v-6aa21345><div class="title" data-v-6aa21345><div class="VPNavBarTitle has-sidebar" data-v-6aa21345 data-v-ab179fa1><a class="title" href="/omni-ui/" data-v-ab179fa1><!--[--><!--]--><!--[--><img class="VPImage logo" src="https://pic1.58cdn.com.cn/nowater/frs/n_v3be298af75a694c31a4fef8b1f33a3eaa.png" alt data-v-8426fc1a><!--]--><span data-v-ab179fa1>OmniUI</span><!--[--><!--]--></a></div></div><div class="content" data-v-6aa21345><div class="content-body" data-v-6aa21345><!--[--><!--]--><div class="VPNavBarSearch search" data-v-6aa21345><!----></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6aa21345 data-v-dc692963><span id="main-nav-aria-label" class="visually-hidden" data-v-dc692963> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/omni-ui/document/introduce.html" tabindex="0" data-v-dc692963 data-v-9c663999><!--[--><span data-v-9c663999>文档</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/omni-ui/components/view/tag.html" tabindex="0" data-v-dc692963 data-v-9c663999><!--[--><span data-v-9c663999>组件</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6aa21345 data-v-6c893767><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title="Switch to dark theme" aria-checked="false" data-v-6c893767 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-6aa21345 data-v-0394ad82 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://github.com/wuba/omni-ui" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-eee4e7cb><span class="vpi-social-github" /></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-6aa21345 data-v-bb2aa2f0 data-v-b6c34ac9><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-b6c34ac9><span class="vpi-more-horizontal icon" data-v-b6c34ac9></span></button><div class="menu" data-v-b6c34ac9><div class="VPMenu" data-v-b6c34ac9 data-v-b98bc113><!----><!--[--><!--[--><!----><div class="group" data-v-bb2aa2f0><div class="item appearance" data-v-bb2aa2f0><p class="label" data-v-bb2aa2f0>Appearance</p><div class="appearance-action" data-v-bb2aa2f0><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title="Switch to dark theme" aria-checked="false" data-v-bb2aa2f0 data-v-5337faa4 data-v-1d5665e3><span class="check" data-v-1d5665e3><span class="icon" data-v-1d5665e3><!--[--><span class="vpi-sun sun" data-v-5337faa4></span><span class="vpi-moon moon" data-v-5337faa4></span><!--]--></span></span></button></div></div></div><div class="group" data-v-bb2aa2f0><div class="item social-links" data-v-bb2aa2f0><div class="VPSocialLinks social-links-list" data-v-bb2aa2f0 data-v-7bc22406><!--[--><a class="VPSocialLink no-icon" href="https://github.com/wuba/omni-ui" aria-label="github" target="_blank" rel="noopener" data-v-7bc22406 data-v-eee4e7cb><span class="vpi-social-github" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6aa21345 data-v-e5dd9c1c><span class="container" data-v-e5dd9c1c><span class="top" data-v-e5dd9c1c></span><span class="middle" data-v-e5dd9c1c></span><span class="bottom" data-v-e5dd9c1c></span></span></button></div></div></div></div><div class="divider" data-v-6aa21345><div class="divider-line" data-v-6aa21345></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-5d98c3a5 data-v-a6f0e41e><div class="container" data-v-a6f0e41e><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-a6f0e41e><span class="vpi-align-left menu-icon" data-v-a6f0e41e></span><span class="menu-text" data-v-a6f0e41e>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-a6f0e41e data-v-17a5e62e><button data-v-17a5e62e>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-5d98c3a5 data-v-319d5ca6><div class="curtain" data-v-319d5ca6></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-319d5ca6><span class="visually-hidden" id="sidebar-aria-label" data-v-319d5ca6> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-c40bc020><section class="VPSidebarItem level-0 has-active" data-v-c40bc020 data-v-b7550ba0><!----><div class="items" data-v-b7550ba0><!--[--><section class="VPSidebarItem level-1" data-v-b7550ba0 data-v-b7550ba0><div class="item" role="button" tabindex="0" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><h3 class="text" data-v-b7550ba0>视图</h3><!----></div><div class="items" data-v-b7550ba0><!--[--><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/tag.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>标签Tag</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/richtext.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>富文本RichText</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/gallery.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>图片浏览Gallery</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/summary.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>图片概览Summary</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/pulltorefresh.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>下拉刷新PullToRefresh</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/stepbar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>步骤条StepBar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/filterbar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>筛选FilterBar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/calendar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>日历Calendar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/guide.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>引导Guide</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/expandabletext.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>可折叠文本ExpandableText</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/view/autolinegrid.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>自动换行布局AutoLineGrid</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1" data-v-b7550ba0 data-v-b7550ba0><div class="item" role="button" tabindex="0" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><h3 class="text" data-v-b7550ba0>表单</h3><!----></div><div class="items" data-v-b7550ba0><!--[--><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/form/datapicker.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>单选/多选选择器DataPicker</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/form/imagepicker.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>图片选择ImagePicker</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/form/searchbar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>搜索框SearchBar</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1 has-active" data-v-b7550ba0 data-v-b7550ba0><div class="item" role="button" tabindex="0" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><h3 class="text" data-v-b7550ba0>操作反馈</h3><!----></div><div class="items" data-v-b7550ba0><!--[--><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/operatefeedback/toast.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>吐司Toast</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/operatefeedback/loading.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>加载框Loading</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/operatefeedback/dialog.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>对话框Dialog</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1" data-v-b7550ba0 data-v-b7550ba0><div class="item" role="button" tabindex="0" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><h3 class="text" data-v-b7550ba0>导航</h3><!----></div><div class="items" data-v-b7550ba0><!--[--><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/navigation/navigationbar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>导航栏NavigationBar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/navigation/tabs.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>选项卡Tabs</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/navigation/bottombar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>底部导航BottomBar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/navigation/anchor.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>锚点Anchor</p><!--]--></a><!----></div><!----></div><!--]--></div></section><section class="VPSidebarItem level-1" data-v-b7550ba0 data-v-b7550ba0><div class="item" role="button" tabindex="0" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><h3 class="text" data-v-b7550ba0>图表</h3><!----></div><div class="items" data-v-b7550ba0><!--[--><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/chart/chart.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>通用图表接口</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/chart/progressbar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>柱状图ProgressBar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/chart/brokenline.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>折线图BrokenLine</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/chart/radar.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>雷达图Radar</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/chart/doughunt.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>环状图Doughunt</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-2 is-link" data-v-b7550ba0 data-v-b7550ba0><div class="item" data-v-b7550ba0><div class="indicator" data-v-b7550ba0></div><a class="VPLink link link" href="/omni-ui/components/chart/funnel.html" data-v-b7550ba0><!--[--><p class="text" data-v-b7550ba0>漏斗图Funnel</p><!--]--></a><!----></div><!----></div><!--]--></div></section><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-5d98c3a5 data-v-1428d186><div class="VPDoc has-sidebar has-aside" data-v-1428d186 data-v-39a288b8><!--[--><!--]--><div class="container" data-v-39a288b8><div class="aside" data-v-39a288b8><div class="aside-curtain" data-v-39a288b8></div><div class="aside-container" data-v-39a288b8><div class="aside-content" data-v-39a288b8><div class="VPDocAside" data-v-39a288b8 data-v-3f215769><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-3f215769 data-v-a5bbad30><div class="content" data-v-a5bbad30><div class="outline-marker" data-v-a5bbad30></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-a5bbad30>目录</div><ul class="VPDocOutlineItem root" data-v-a5bbad30 data-v-b933a997><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-3f215769></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-39a288b8><div class="content-container" data-v-39a288b8><!--[--><!--]--><main class="main" data-v-39a288b8><div style="position:relative;" class="vp-doc _omni-ui_components_operatefeedback_dialog" data-v-39a288b8><div><h1 id="对话框dialog" tabindex="-1">对话框Dialog <a class="header-anchor" href="#对话框dialog" aria-label="Permalink to &quot;对话框Dialog&quot;">​</a></h1><h2 id="一、效果总览" tabindex="-1">一、效果总览 <a class="header-anchor" href="#一、效果总览" aria-label="Permalink to &quot;一、效果总览&quot;">​</a></h2><img src="/omni-ui/assets/dialog.B0_yHTLK.png" width="700"><h2 id="二、描述" tabindex="-1">二、描述 <a class="header-anchor" href="#二、描述" aria-label="Permalink to &quot;二、描述&quot;">​</a></h2><p>通用弹出对话框，分为头部标题区、内容区、和底部按键区三个区域，支持使用args定制内容和样式，也支持传入builder自定义。 支持函数调用和组件调用两种方式。</p><h2 id="三、构造函数及参数说明" tabindex="-1">三、构造函数及参数说明 <a class="header-anchor" href="#三、构造函数及参数说明" aria-label="Permalink to &quot;三、构造函数及参数说明&quot;">​</a></h2><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>// 组件调用</span></span>
+<span class="line"><span>OmniCustomDialog({</span></span>
+<span class="line"><span>  titleBuilder?: VoidCallback,</span></span>
+<span class="line"><span>  contentBuilder?: VoidCallback,</span></span>
+<span class="line"><span>  buttonBuilder?: (controller?: OmniDialogController) =&gt; void,</span></span>
+<span class="line"><span>  titleArgs?: OmniDialogTextArgs,</span></span>
+<span class="line"><span>  contentArgs?: OmniDialogTextArgs,</span></span>
+<span class="line"><span>  leftButtonArgs?: OmniDialogButtonArgs,</span></span>
+<span class="line"><span>  rightButtonArgs?: OmniDialogButtonArgs,</span></span>
+<span class="line"><span>  onLeftButtonClick?: (event: ClickEvent) =&gt; void,</span></span>
+<span class="line"><span>  onRightButtonClick?: (event: ClickEvent) =&gt; void,</span></span>
+<span class="line"><span>  dialogBorder?: BorderOptions,</span></span>
+<span class="line"><span>  dialogBgColor?: ResourceColor,</span></span>
+<span class="line"><span>  dialogDivider?: OmniDialogDividerOptions,</span></span>
+<span class="line"><span>})</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 函数调用</span></span>
+<span class="line"><span>let dialog = new OmniDialog(uiContext: UIContext)</span></span>
+<span class="line"><span>// 打开dialog</span></span>
+<span class="line"><span>dialog.show(args: OmniDialogArgs)</span></span>
+<span class="line"><span>// 关闭dialog</span></span>
+<span class="line"><span>dialog.dismiss()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>export interface OmniDialogArgs {</span></span>
+<span class="line"><span>  titleBuilder?: () =&gt; void</span></span>
+<span class="line"><span>  contentBuilder?: () =&gt; void</span></span>
+<span class="line"><span>  buttonBuilder?: (controller?: OmniDialogController) =&gt; void</span></span>
+<span class="line"><span>  titleArgs?: OmniDialogTextArgs</span></span>
+<span class="line"><span>  contentArgs?: OmniDialogTextArgs</span></span>
+<span class="line"><span>  leftButtonArgs?: OmniDialogButtonArgs</span></span>
+<span class="line"><span>  rightButtonArgs?: OmniDialogButtonArgs</span></span>
+<span class="line"><span>  onLeftButtonClick?: (event: ClickEvent) =&gt; void</span></span>
+<span class="line"><span>  onRightButtonClick?: (event: ClickEvent) =&gt; void</span></span>
+<span class="line"><span>  dialogBorder?: BorderOptions</span></span>
+<span class="line"><span>  dialogBgColor?: ResourceColor</span></span>
+<span class="line"><span>  dialogDivider?: OmniDialogDividerOptions</span></span>
+<span class="line"><span>  isModal?: boolean</span></span>
+<span class="line"><span>  showInSubWindow?: boolean</span></span>
+<span class="line"><span>  autoCancel?: boolean</span></span>
+<span class="line"><span>  alignment?: DialogAlignment</span></span>
+<span class="line"><span>  offset?: Offset</span></span>
+<span class="line"><span>  transition?: TransitionEffect</span></span>
+<span class="line"><span>  maskColor?: ResourceColor</span></span>
+<span class="line"><span>  onDidAppear?: VoidCallback</span></span>
+<span class="line"><span>  onDidDisappear?: VoidCallback</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>interface OmniDialogTextArgs {</span></span>
+<span class="line"><span>  value: string</span></span>
+<span class="line"><span>  style?: OmniDialogFontStyle</span></span>
+<span class="line"><span>  padding?: Padding | Length | LocalizedPadding</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>interface OmniDialogFontStyle {</span></span>
+<span class="line"><span>  font?: Font</span></span>
+<span class="line"><span>  color?: ResourceColor</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>export interface OmniDialogButtonArgs {</span></span>
+<span class="line"><span>  value: string</span></span>
+<span class="line"><span>  fontStyle?: OmniDialogFontStyle</span></span>
+<span class="line"><span>  padding?: Padding | Length | LocalizedPadding</span></span>
+<span class="line"><span>  backgroundColor?: ResourceColor</span></span>
+<span class="line"><span>  border?: BorderOptions</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>export interface OmniDialogDividerOptions {</span></span>
+<span class="line"><span>  strokeWidth?: number | string</span></span>
+<span class="line"><span>  color?: ResourceColor</span></span>
+<span class="line"><span>  margin?: Margin | Length | LocalizedMargin</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="omnidialogargs" tabindex="-1">OmniDialogArgs <a class="header-anchor" href="#omnidialogargs" aria-label="Permalink to &quot;OmniDialogArgs&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">参数名</th><th style="text-align:left;">类型</th><th style="text-align:left;">必填</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;">titleBuilder</td><td style="text-align:left;">VoidCallback</td><td style="text-align:left;">否</td><td style="text-align:left;">标题区域的builder函数</td></tr><tr><td style="text-align:left;">contentBuilder</td><td style="text-align:left;">VoidCallback</td><td style="text-align:left;">否</td><td style="text-align:left;">内容区域的builder函数</td></tr><tr><td style="text-align:left;">buttonBuilder</td><td style="text-align:left;">(controller?: OmniDialogController) =&gt; void</td><td style="text-align:left;">否</td><td style="text-align:left;">按键区域的builder函数，controller用于关闭dialog<br><code>controller?.dismiss()</code></td></tr><tr><td style="text-align:left;">titleArgs</td><td style="text-align:left;">OmniDialogTextArgs</td><td style="text-align:left;">否</td><td style="text-align:left;">标题区内容及样式设置</td></tr><tr><td style="text-align:left;">contentArgs</td><td style="text-align:left;">OmniDialogTextArgs</td><td style="text-align:left;">否</td><td style="text-align:left;">内容区内容及样式设置</td></tr><tr><td style="text-align:left;">leftButtonArgs</td><td style="text-align:left;">OmniDialogButtonArgs</td><td style="text-align:left;">否</td><td style="text-align:left;">左边按键内容及样式设置</td></tr><tr><td style="text-align:left;">rightButtonArgs</td><td style="text-align:left;">OmniDialogButtonArgs</td><td style="text-align:left;">否</td><td style="text-align:left;">右边按键内容及样式设置</td></tr><tr><td style="text-align:left;">onLeftButtonClick</td><td style="text-align:left;">(event: ClickEvent) =&gt; void</td><td style="text-align:left;">否</td><td style="text-align:left;">左边按键的点击回调</td></tr><tr><td style="text-align:left;">onRightButtonClick</td><td style="text-align:left;">(event: ClickEvent) =&gt; void</td><td style="text-align:left;">否</td><td style="text-align:left;">右边按键的点击回调</td></tr><tr><td style="text-align:left;">dialogBorder</td><td style="text-align:left;">BorderOptions</td><td style="text-align:left;">否</td><td style="text-align:left;">对话框的边框样式设置</td></tr><tr><td style="text-align:left;">dialogBgColor</td><td style="text-align:left;">ResourceColor</td><td style="text-align:left;">否</td><td style="text-align:left;">对话框的背板颜色设置</td></tr><tr><td style="text-align:left;">dialogDivider</td><td style="text-align:left;">OmniDialogDividerOptions</td><td style="text-align:left;">否</td><td style="text-align:left;">对话框中分割线样式设置</td></tr><tr><td style="text-align:left;">isModal</td><td style="text-align:left;">boolean</td><td style="text-align:left;">否</td><td style="text-align:left;">弹窗是否为模态窗口</td></tr><tr><td style="text-align:left;">showInSubWindow</td><td style="text-align:left;">boolean</td><td style="text-align:left;">否</td><td style="text-align:left;">某弹框需要显示在主窗口之外时，是否在子窗口显示此弹窗。</td></tr><tr><td style="text-align:left;">autoCancel</td><td style="text-align:left;">boolean</td><td style="text-align:left;">否</td><td style="text-align:left;">点击遮障层时，是否关闭弹窗</td></tr><tr><td style="text-align:left;">alignment</td><td style="text-align:left;">DialogAlignment</td><td style="text-align:left;">否</td><td style="text-align:left;">弹窗在竖直方向上的对齐方式</td></tr><tr><td style="text-align:left;">offset</td><td style="text-align:left;">Offset</td><td style="text-align:left;">否</td><td style="text-align:left;">弹窗相对alignment所在位置的偏移量</td></tr><tr><td style="text-align:left;">transition</td><td style="text-align:left;">TransitionEffect</td><td style="text-align:left;">否</td><td style="text-align:left;">弹窗显示和退出的过渡效果</td></tr><tr><td style="text-align:left;">maskColor</td><td style="text-align:left;">ResourceColor</td><td style="text-align:left;">否</td><td style="text-align:left;">蒙层颜色</td></tr><tr><td style="text-align:left;">onDidAppear</td><td style="text-align:left;">VoidCallback</td><td style="text-align:left;">否</td><td style="text-align:left;">弹窗弹出时的事件回调</td></tr><tr><td style="text-align:left;">onDidDisappear</td><td style="text-align:left;">VoidCallback</td><td style="text-align:left;">否</td><td style="text-align:left;">弹窗消失时的事件回调</td></tr></tbody></table><h3 id="omnidialogtextargs" tabindex="-1">OmniDialogTextArgs <a class="header-anchor" href="#omnidialogtextargs" aria-label="Permalink to &quot;OmniDialogTextArgs&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">参数名</th><th style="text-align:left;">类型</th><th style="text-align:left;">必填</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;">value</td><td style="text-align:left;">string</td><td style="text-align:left;">是</td><td style="text-align:left;">文本内容</td></tr><tr><td style="text-align:left;">style</td><td style="text-align:left;">OmniDialogFontStyle</td><td style="text-align:left;">否</td><td style="text-align:left;">文本字体样式</td></tr><tr><td style="text-align:left;">padding</td><td style="text-align:left;">Padding | Length | LocalizedPadding</td><td style="text-align:left;">否</td><td style="text-align:left;">文本内边距</td></tr></tbody></table><h3 id="omnidialogfontstyle" tabindex="-1">OmniDialogFontStyle <a class="header-anchor" href="#omnidialogfontstyle" aria-label="Permalink to &quot;OmniDialogFontStyle&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">参数名</th><th style="text-align:left;">类型</th><th style="text-align:left;">必填</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;">font</td><td style="text-align:left;">Font</td><td style="text-align:left;">否</td><td style="text-align:left;">设置文本样式，包括字体大小、字体粗细、字体族和字体风格</td></tr><tr><td style="text-align:left;">color</td><td style="text-align:left;">ResourceColor</td><td style="text-align:left;">否</td><td style="text-align:left;">设置文本字体颜色</td></tr></tbody></table><h3 id="omnidialogbuttonargs" tabindex="-1">OmniDialogButtonArgs <a class="header-anchor" href="#omnidialogbuttonargs" aria-label="Permalink to &quot;OmniDialogButtonArgs&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">参数名</th><th style="text-align:left;">类型</th><th style="text-align:left;">必填</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;">value</td><td style="text-align:left;">string</td><td style="text-align:left;">是</td><td style="text-align:left;">设置按键的内容文本</td></tr><tr><td style="text-align:left;">fontStyle</td><td style="text-align:left;">OmniDialogFontStyle</td><td style="text-align:left;">否</td><td style="text-align:left;">设置按键的文本样式</td></tr><tr><td style="text-align:left;">padding</td><td style="text-align:left;">Padding | Length | LocalizedPadding</td><td style="text-align:left;">否</td><td style="text-align:left;">设置按键的内边距</td></tr><tr><td style="text-align:left;">backgroundColor</td><td style="text-align:left;">ResourceColor</td><td style="text-align:left;">否</td><td style="text-align:left;">设置按键的背景颜色</td></tr><tr><td style="text-align:left;">border</td><td style="text-align:left;">BorderOptions</td><td style="text-align:left;">否</td><td style="text-align:left;">设置按键的边框样式</td></tr></tbody></table><h3 id="omnidialogdivideroptions" tabindex="-1">OmniDialogDividerOptions <a class="header-anchor" href="#omnidialogdivideroptions" aria-label="Permalink to &quot;OmniDialogDividerOptions&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">参数名</th><th style="text-align:left;">类型</th><th style="text-align:left;">必填</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;">strokeWidth</td><td style="text-align:left;">number | string</td><td style="text-align:left;">否</td><td style="text-align:left;">分割线的宽度</td></tr><tr><td style="text-align:left;">color</td><td style="text-align:left;">ResourceColor</td><td style="text-align:left;">否</td><td style="text-align:left;">分割线的颜色</td></tr><tr><td style="text-align:left;">margin</td><td style="text-align:left;">Margin | Length | LocalizedMargin</td><td style="text-align:left;">否</td><td style="text-align:left;">分割线的外边距</td></tr></tbody></table><h2 id="四、代码演示" tabindex="-1">四、代码演示 <a class="header-anchor" href="#四、代码演示" aria-label="Permalink to &quot;四、代码演示&quot;">​</a></h2><h3 id="示例一-单个按钮" tabindex="-1">示例一：单个按钮 <a class="header-anchor" href="#示例一-单个按钮" aria-label="Permalink to &quot;示例一：单个按钮&quot;">​</a></h3><img src="/omni-ui/assets/dialog1.BqNPOeYz.jpg" width="200"><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@Entry</span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>struct DialogExample {</span></span>
+<span class="line"><span>  private dialog: OmniDialog = new OmniDialog(this.getUIContext())</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  build() {</span></span>
+<span class="line"><span>    Column() {</span></span>
+<span class="line"><span>      Button(&#39;单个按钮&#39;).onClick(() =&gt; {</span></span>
+<span class="line"><span>            this.dialog.show({</span></span>
+<span class="line"><span>              titleArgs: { value: &#39;标题&#39; },</span></span>
+<span class="line"><span>              contentArgs: { value: &#39;文案文案文案文案文案文案文案文案文案文案文案文案&#39; },</span></span>
+<span class="line"><span>              leftButtonArgs: { value: &#39;确定&#39;, fontStyle: { color: 0x4086f1 } },</span></span>
+<span class="line"><span>              onLeftButtonClick: () =&gt; {</span></span>
+<span class="line"><span>                this.dialog.dismiss()</span></span>
+<span class="line"><span>                OmniToast.showText({ msg: &#39;点击确定&#39; })</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              dialogDivider: { margin: { left: 8, right: 8 } }</span></span>
+<span class="line"><span>            })</span></span>
+<span class="line"><span>          })</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="示例二-两个按钮" tabindex="-1">示例二：两个按钮 <a class="header-anchor" href="#示例二-两个按钮" aria-label="Permalink to &quot;示例二：两个按钮&quot;">​</a></h3><img src="/omni-ui/assets/dialog2.DJt36dG0.jpg" width="200"><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@Entry</span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>struct DialogExample {</span></span>
+<span class="line"><span>  private dialog: OmniDialog = new OmniDialog(this.getUIContext())</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  build() {</span></span>
+<span class="line"><span>    Column() {</span></span>
+<span class="line"><span>      Button(&#39;两个按钮&#39;).onClick(() =&gt; {</span></span>
+<span class="line"><span>            this.dialog.show({</span></span>
+<span class="line"><span>              titleArgs: { value: &#39;标题&#39; },</span></span>
+<span class="line"><span>              contentArgs: { value: &#39;这是正文内容&#39; },</span></span>
+<span class="line"><span>              leftButtonArgs: { value: &#39;取消&#39;, fontStyle: { color: 0x303030 } },</span></span>
+<span class="line"><span>              onLeftButtonClick: () =&gt; {</span></span>
+<span class="line"><span>                this.dialog.dismiss()</span></span>
+<span class="line"><span>                OmniToast.showText({ msg: &#39;点击取消&#39; })</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              rightButtonArgs: {</span></span>
+<span class="line"><span>                value: &#39;确定&#39;,</span></span>
+<span class="line"><span>                fontStyle: { color: Color.White, font: { weight: FontWeight.Bold, size: 20 } },</span></span>
+<span class="line"><span>                backgroundColor: 0x3b82f1,</span></span>
+<span class="line"><span>                border: { radius: { bottomRight: 10 } }</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              onRightButtonClick: () =&gt; {</span></span>
+<span class="line"><span>                this.dialog.dismiss()</span></span>
+<span class="line"><span>                OmniToast.showText({ msg: &#39;点击确定&#39; })</span></span>
+<span class="line"><span>              }</span></span>
+<span class="line"><span>            })</span></span>
+<span class="line"><span>          })</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="示例三-自定义标题" tabindex="-1">示例三：自定义标题 <a class="header-anchor" href="#示例三-自定义标题" aria-label="Permalink to &quot;示例三：自定义标题&quot;">​</a></h3><img src="/omni-ui/assets/dialog3.Bh6svnh-.jpg" width="200"><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@Entry</span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>struct DialogExample {</span></span>
+<span class="line"><span>  private dialog: OmniDialog = new OmniDialog(this.getUIContext())</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  build() {</span></span>
+<span class="line"><span>    Column() {</span></span>
+<span class="line"><span>      Button(&#39;自定义标题&#39;).onClick(() =&gt; {</span></span>
+<span class="line"><span>            this.dialog.show({</span></span>
+<span class="line"><span>              titleBuilder: myTitleBuilder,</span></span>
+<span class="line"><span>              contentArgs: { value: &#39;文案文案文案文案文案文案文案文案文案文案文案文案&#39; },</span></span>
+<span class="line"><span>              rightButtonArgs: {</span></span>
+<span class="line"><span>                value: &#39;我知道了&#39;,</span></span>
+<span class="line"><span>                fontStyle: { color: 0x4086f1 },</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              onRightButtonClick: () =&gt; {</span></span>
+<span class="line"><span>                this.dialog.dismiss()</span></span>
+<span class="line"><span>                OmniToast.showText({ msg: &#39;点击我知道了&#39; })</span></span>
+<span class="line"><span>              }</span></span>
+<span class="line"><span>            })</span></span>
+<span class="line"><span>          })</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Builder</span></span>
+<span class="line"><span>function myTitleBuilder() {</span></span>
+<span class="line"><span>  Row() {</span></span>
+<span class="line"><span>    Image(&#39;https://pic4.58cdn.com.cn/nowater/frs/n_v3d872cbc54d6d4c6ba1a2112513928d7c.png&#39;)</span></span>
+<span class="line"><span>      .size({ width: 30, height: 30 })</span></span>
+<span class="line"><span>    Text(&#39;这是标题&#39;)</span></span>
+<span class="line"><span>      .font({</span></span>
+<span class="line"><span>        weight: FontWeight.Bold,</span></span>
+<span class="line"><span>        size: 20</span></span>
+<span class="line"><span>      })</span></span>
+<span class="line"><span>      .fontColor(0xFF333333)</span></span>
+<span class="line"><span>      .padding(10)</span></span>
+<span class="line"><span>    Image(&#39;https://pic4.58cdn.com.cn/nowater/frs/n_v3d872cbc54d6d4c6ba1a2112513928d7c.png&#39;)</span></span>
+<span class="line"><span>      .size({ width: 30, height: 30 })</span></span>
+<span class="line"><span>  }.alignItems(VerticalAlign.Center)</span></span>
+<span class="line"><span>  .justifyContent(FlexAlign.Center)</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="示例四-自定义内容" tabindex="-1">示例四：自定义内容 <a class="header-anchor" href="#示例四-自定义内容" aria-label="Permalink to &quot;示例四：自定义内容&quot;">​</a></h3><img src="/omni-ui/assets/dialog4.DS71x44a.jpg" width="200"><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@Entry</span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>struct DialogExample {</span></span>
+<span class="line"><span>  private dialog: OmniDialog = new OmniDialog(this.getUIContext())</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  build() {</span></span>
+<span class="line"><span>    Column() {</span></span>
+<span class="line"><span>      Button(&#39;自定义内容&#39;).onClick(() =&gt; {</span></span>
+<span class="line"><span>            this.dialog.show({</span></span>
+<span class="line"><span>              titleArgs: { value: &#39;标题标题标题hello这是标题&#39; },</span></span>
+<span class="line"><span>              rightButtonArgs: {</span></span>
+<span class="line"><span>                value: &#39;我知道了&#39;,</span></span>
+<span class="line"><span>                fontStyle: { color: 0x4086f1 },</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              onRightButtonClick: () =&gt; {</span></span>
+<span class="line"><span>                this.dialog.dismiss()</span></span>
+<span class="line"><span>                OmniToast.showText({ msg: &#39;点击我知道了&#39; })</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              contentBuilder: this.myContentBuilder,</span></span>
+<span class="line"><span>            })</span></span>
+<span class="line"><span>          })</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  } </span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  @Builder</span></span>
+<span class="line"><span>  myContentBuilder() {</span></span>
+<span class="line"><span>    Column({ space: 10 }) {</span></span>
+<span class="line"><span>      Text(&#39;多行内容&#39;)</span></span>
+<span class="line"><span>      Text(&#39;这是第二行&#39;)</span></span>
+<span class="line"><span>        .backgroundColor(0xeb4e27)</span></span>
+<span class="line"><span>      Text(&#39;这是第三行&#39;)</span></span>
+<span class="line"><span>    }.width(&#39;80%&#39;)</span></span>
+<span class="line"><span>    .backgroundColor(0x5abe43)</span></span>
+<span class="line"><span>    .borderRadius(6)</span></span>
+<span class="line"><span>  } </span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="示例五-自定义按钮" tabindex="-1">示例五：自定义按钮 <a class="header-anchor" href="#示例五-自定义按钮" aria-label="Permalink to &quot;示例五：自定义按钮&quot;">​</a></h3><img src="/omni-ui/assets/dialog5.DX6-KH1I.jpg" width="200"><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@Entry</span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>struct DialogExample {</span></span>
+<span class="line"><span>  private dialog: OmniDialog = new OmniDialog(this.getUIContext())</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  build() {</span></span>
+<span class="line"><span>    Column() {</span></span>
+<span class="line"><span>      Button(&#39;自定义按钮&#39;).onClick(() =&gt; {</span></span>
+<span class="line"><span>            this.dialog.show({</span></span>
+<span class="line"><span>              titleArgs: { value: &#39;标题标题标题hello这是标题&#39; },</span></span>
+<span class="line"><span>              contentArgs: { value: &#39;这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容&#39; },</span></span>
+<span class="line"><span>              buttonBuilder: myButtonBuilder,</span></span>
+<span class="line"><span>            })</span></span>
+<span class="line"><span>          })</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@Builder</span></span>
+<span class="line"><span>function myButtonBuilder(controller?: OmniDialogController) {</span></span>
+<span class="line"><span>  Column() {</span></span>
+<span class="line"><span>    Divider()</span></span>
+<span class="line"><span>      .vertical(false)</span></span>
+<span class="line"><span>      .strokeWidth(0.5)</span></span>
+<span class="line"><span>      .color(0x99999999)</span></span>
+<span class="line"><span>    Text(&#39;选项一&#39;)</span></span>
+<span class="line"><span>      .textAlign(TextAlign.Center)</span></span>
+<span class="line"><span>      .fontColor(0xFF333333)</span></span>
+<span class="line"><span>      .fontSize(20)</span></span>
+<span class="line"><span>      .padding(10)</span></span>
+<span class="line"><span>      .onClick(() =&gt; {</span></span>
+<span class="line"><span>        controller?.dismiss()</span></span>
+<span class="line"><span>        OmniToast.showText({ msg: &#39;点击了选项一&#39; })</span></span>
+<span class="line"><span>      })</span></span>
+<span class="line"><span>      .width(&#39;100%&#39;)</span></span>
+<span class="line"><span>    Divider()</span></span>
+<span class="line"><span>      .vertical(false)</span></span>
+<span class="line"><span>      .strokeWidth(0.5)</span></span>
+<span class="line"><span>      .color(0x99999999)</span></span>
+<span class="line"><span>    Text(&#39;选项二&#39;)</span></span>
+<span class="line"><span>      .textAlign(TextAlign.Center)</span></span>
+<span class="line"><span>      .fontColor(0xFF333333)</span></span>
+<span class="line"><span>      .fontSize(20)</span></span>
+<span class="line"><span>      .padding(10)</span></span>
+<span class="line"><span>      .onClick(() =&gt; {</span></span>
+<span class="line"><span>        controller?.dismiss()</span></span>
+<span class="line"><span>        OmniToast.showText({ msg: &#39;点击了选项二&#39; })</span></span>
+<span class="line"><span>      })</span></span>
+<span class="line"><span>      .width(&#39;100%&#39;)</span></span>
+<span class="line"><span>    Divider()</span></span>
+<span class="line"><span>      .vertical(false)</span></span>
+<span class="line"><span>      .strokeWidth(0.5)</span></span>
+<span class="line"><span>      .color(0x99999999)</span></span>
+<span class="line"><span>    Text(&#39;选项三&#39;)</span></span>
+<span class="line"><span>      .textAlign(TextAlign.Center)</span></span>
+<span class="line"><span>      .fontColor(0xFF333333)</span></span>
+<span class="line"><span>      .fontSize(20)</span></span>
+<span class="line"><span>      .padding(10)</span></span>
+<span class="line"><span>      .onClick(() =&gt; {</span></span>
+<span class="line"><span>        controller?.dismiss()</span></span>
+<span class="line"><span>        OmniToast.showText({ msg: &#39;点击了选项三&#39; })</span></span>
+<span class="line"><span>      })</span></span>
+<span class="line"><span>      .width(&#39;100%&#39;)</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h3 id="示例六-组件调用" tabindex="-1">示例六：组件调用 <a class="header-anchor" href="#示例六-组件调用" aria-label="Permalink to &quot;示例六：组件调用&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>@Entry</span></span>
+<span class="line"><span>@Component</span></span>
+<span class="line"><span>struct DialogExample {</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  build() {</span></span>
+<span class="line"><span>    Column() {</span></span>
+<span class="line"><span>      OmniCustomDialog({</span></span>
+<span class="line"><span>            titleArgs: { value: &#39;组件调用方式&#39; },</span></span>
+<span class="line"><span>            contentArgs: {</span></span>
+<span class="line"><span>              value: &#39;组件调用方式组件调用方式组件调用方式&#39;</span></span>
+<span class="line"><span>            },</span></span>
+<span class="line"><span>            dialogBorder: { width: 2, radius: 6, color: 0x333333 },</span></span>
+<span class="line"><span>            rightButtonArgs: {</span></span>
+<span class="line"><span>              value: &#39;我知道了&#39;,</span></span>
+<span class="line"><span>              fontStyle: { color: 0x4086f1 },</span></span>
+<span class="line"><span>            },</span></span>
+<span class="line"><span>          })</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>}</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-39a288b8 data-v-e257564d><!--[--><!--]--><!----><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-e257564d><span class="visually-hidden" id="doc-footer-aria-label" data-v-e257564d>Pager</span><div class="pager" data-v-e257564d><a class="VPLink link pager-link prev" href="/omni-ui/components/operatefeedback/loading.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>Previous page</span><span class="title" data-v-e257564d>加载框Loading</span><!--]--></a></div><div class="pager" data-v-e257564d><a class="VPLink link pager-link next" href="/omni-ui/components/navigation/navigationbar.html" data-v-e257564d><!--[--><span class="desc" data-v-e257564d>Next page</span><span class="title" data-v-e257564d>导航栏NavigationBar</span><!--]--></a></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter has-sidebar" data-v-5d98c3a5 data-v-e315a0ad><div class="container" data-v-e315a0ad><!----><p class="copyright" data-v-e315a0ad>Copyright © 2025 WuBa All Rights Reserved</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"DKP01zYZ\",\"components.md\":\"DqFs_gWu\",\"components_chart_brokenline.md\":\"Fjm_v6xP\",\"components_chart_chart.md\":\"D9U50JSP\",\"components_chart_doughunt.md\":\"BioLkfy-\",\"components_chart_funnel.md\":\"BYXAFVdn\",\"components_chart_progressbar.md\":\"ie4wPq5S\",\"components_chart_radar.md\":\"C70UfuSn\",\"components_form_datapicker.md\":\"DirxVUuq\",\"components_form_imagepicker.md\":\"BV5FqwC5\",\"components_form_searchbar.md\":\"B8P4ihd0\",\"components_navigation_anchor.md\":\"CHNDrbaw\",\"components_navigation_bottombar.md\":\"DQ9lhEoh\",\"components_navigation_navigationbar.md\":\"20mQemv5\",\"components_navigation_tabs.md\":\"CJdyMZ6N\",\"components_operatefeedback_dialog.md\":\"DyQt7D4X\",\"components_operatefeedback_loading.md\":\"B3LnO7Vl\",\"components_operatefeedback_toast.md\":\"yQhuzDCm\",\"components_view_autolinegrid.md\":\"CRZ3JLEk\",\"components_view_calendar.md\":\"BJBkmFnY\",\"components_view_expandabletext.md\":\"DD3cvXVT\",\"components_view_filterbar.md\":\"DylBaZzr\",\"components_view_gallery.md\":\"FewyHA68\",\"components_view_guide.md\":\"CvqasgZW\",\"components_view_pulltorefresh.md\":\"B-jmpa0p\",\"components_view_richtext.md\":\"CYe3Q9sH\",\"components_view_stepbar.md\":\"CGHTb1Mm\",\"components_view_summary.md\":\"CW9sgDzg\",\"components_view_tag.md\":\"BsQU-jX5\",\"document_changelog.md\":\"DDA7TehO\",\"document_faq.md\":\"BFhS1DuF\",\"document_introduce.md\":\"CHJj7iOG\",\"document_quickstart.md\":\"CPtn_5Zl\",\"index.md\":\"c7nA16xQ\",\"markdown-examples.md\":\"BUy_9YbY\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"OmniUI\",\"description\":\"OmniUI，享受飞一样的开发速度\",\"base\":\"/omni-ui/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"logo\":\"https://pic1.58cdn.com.cn/nowater/frs/n_v3be298af75a694c31a4fef8b1f33a3eaa.png\",\"outline\":[2,6],\"nav\":[{\"text\":\"文档\",\"link\":\"/document/introduce\"},{\"text\":\"组件\",\"link\":\"/components/view/tag\"}],\"sidebar\":{\"/document/\":[{\"items\":[{\"text\":\"介绍\",\"link\":\"/document/introduce\"},{\"text\":\"快速开始\",\"link\":\"/document/quickstart\"},{\"text\":\"FAQ\",\"link\":\"/document/faq\"},{\"text\":\"Changelog\",\"link\":\"/document/changelog\"}]}],\"/components/\":[{\"items\":[{\"text\":\"视图\",\"items\":[{\"text\":\"标签Tag\",\"link\":\"/components/view/tag\"},{\"text\":\"富文本RichText\",\"link\":\"/components/view/richtext\"},{\"text\":\"图片浏览Gallery\",\"link\":\"/components/view/gallery\"},{\"text\":\"图片概览Summary\",\"link\":\"/components/view/summary\"},{\"text\":\"下拉刷新PullToRefresh\",\"link\":\"/components/view/pulltorefresh\"},{\"text\":\"步骤条StepBar\",\"link\":\"/components/view/stepbar\"},{\"text\":\"筛选FilterBar\",\"link\":\"/components/view/filterbar\"},{\"text\":\"日历Calendar\",\"link\":\"/components/view/calendar\"},{\"text\":\"引导Guide\",\"link\":\"/components/view/guide\"},{\"text\":\"可折叠文本ExpandableText\",\"link\":\"/components/view/expandabletext\"},{\"text\":\"自动换行布局AutoLineGrid\",\"link\":\"/components/view/autolinegrid\"}]},{\"text\":\"表单\",\"items\":[{\"text\":\"单选/多选选择器DataPicker\",\"link\":\"/components/form/datapicker\"},{\"text\":\"图片选择ImagePicker\",\"link\":\"/components/form/imagepicker\"},{\"text\":\"搜索框SearchBar\",\"link\":\"/components/form/searchbar\"}]},{\"text\":\"操作反馈\",\"items\":[{\"text\":\"吐司Toast\",\"link\":\"/components/operatefeedback/toast\"},{\"text\":\"加载框Loading\",\"link\":\"/components/operatefeedback/loading\"},{\"text\":\"对话框Dialog\",\"link\":\"/components/operatefeedback/dialog\"}]},{\"text\":\"导航\",\"items\":[{\"text\":\"导航栏NavigationBar\",\"link\":\"/components/navigation/navigationbar\"},{\"text\":\"选项卡Tabs\",\"link\":\"/components/navigation/tabs\"},{\"text\":\"底部导航BottomBar\",\"link\":\"/components/navigation/bottombar\"},{\"text\":\"锚点Anchor\",\"link\":\"/components/navigation/anchor\"}]},{\"text\":\"图表\",\"items\":[{\"text\":\"通用图表接口\",\"link\":\"/components/chart/chart\"},{\"text\":\"柱状图ProgressBar\",\"link\":\"/components/chart/progressbar\"},{\"text\":\"折线图BrokenLine\",\"link\":\"/components/chart/brokenline\"},{\"text\":\"雷达图Radar\",\"link\":\"/components/chart/radar\"},{\"text\":\"环状图Doughunt\",\"link\":\"/components/chart/doughunt\"},{\"text\":\"漏斗图Funnel\",\"link\":\"/components/chart/funnel\"}]}]}]},\"outlineTitle\":\"目录\",\"footer\":{\"copyright\":\"Copyright © 2025 WuBa All Rights Reserved\"},\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/wuba/omni-ui\"}]},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+    
+  </body>
+</html>
