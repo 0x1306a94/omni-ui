@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a2 as r}from"./chunks/framework.CexspsV9.js";const m=JSON.parse('{"title":"FAQ","description":"","frontmatter":{},"headers":[],"relativePath":"document/faq.md","filePath":"document/faq.md"}'),o={name:"document/faq.md"},s=r("",3),n=[s];function _(c,i,d,h,l,f){return t(),e("div",null,n)}const p=a(o,[["render",_]]);export{m as __pageData,p as default};
